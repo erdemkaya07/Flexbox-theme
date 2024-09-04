@@ -1,0 +1,200 @@
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}  */
+body{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+}
+h1 {
+  font-weight: 300;
+}
+
+header {
+  margin: 0 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 36px;
+  height: 4px;
+  background-color: black;
+  border-radius: 10px;
+  margin: 3px;
+}
+
+.navbar .hamburger{
+  display: none;
+}
+
+.links ul {
+  display: flex;
+  list-style: none;
+}
+
+.links a {
+  color:black;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 0px 8px;
+}
+
+.links a:hover {
+  color: orange;
+  transition: 1s;
+  border-bottom:1px solid black ;
+}
+.gallery {
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 15%;
+}
+.card {
+  display: inline-block;
+  width: 48%;
+  padding: 16px;
+  box-sizing: border-box;
+}
+.card img {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card img:hover {
+  opacity: 0.8;
+}
+
+.card h2{
+  margin: 8px 0px 16px 0px;
+  font-weight: 300;
+}
+
+.why {
+  width: 50%;
+  margin: 100px 200px;
+}
+
+.banner {
+  font-weight: 300;
+  font-style: italic;
+}
+
+.message {
+  margin-top: 0;
+  font-size: 64px;
+  font-weight: 300;
+  color: red;
+  font-style: italic;
+  border-bottom: 1px solid black;
+}
+
+.contact p{
+  margin:0;
+}
+
+.mobileNav a:hover{
+  color: orange;
+  transition: 0.7s;
+}
+
+
+@media screen and (max-width: 768px) {
+  .navbar .hamburger{
+    display: block;
+    z-index: 1;
+  }
+
+  .navbar .links {
+     display: none;
+  }
+
+  .navbar h1 {
+    font-size: 20px;
+  }
+
+  .why {
+    width: 80%;
+    margin:0;
+    padding: 20px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 0;
+  }
+
+  .message {
+    font-size: 35px;
+  }
+}
+
+.animationBar2{
+  animation: 1s fadeBar2;
+  animation-fill-mode: forwards;
+}
+
+.animationBar1 {
+  animation: 1s fadeBar1;
+  animation-fill-mode: forwards;
+}
+
+.animationBar3 {
+  animation: 1s fadeBar3;
+  animation-fill-mode: forwards;
+}
+
+.mobileNav {
+  position: fixed;
+  width: 80px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: -120px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 16px;
+  transition: transform 1s ;
+  a{
+    color: black;
+    text-decoration: none;
+    margin: 16px 0px;
+  }
+}
+
+.openSidebar {
+  transform: translate(-120px);
+}
+
+@keyframes fadeBar2 {
+  from {
+    transform: scaleX(1);
+  }to {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes fadeBar1 {
+  from{
+    transform: rotate(0);
+  } to {
+    transform: rotate(45deg) translate(4px, 6px);
+  }
+}
+
+@keyframes fadeBar3 {
+  from{
+    transform: rotate(0);
+  } to {
+    transform: rotate(-45deg) translate(4px, -6px);
+  }
+}
+
